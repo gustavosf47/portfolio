@@ -8,6 +8,7 @@
   "email": "Email",
   "linkedin": "LinkedIn",
   "location": "Location",
+  "country": "Spain",
   "aboutMe": "About Me",
   "aboutMeText": "Software developer with back-end experience, specialized in Node.js and Spring Boot. Experienced in designing REST applications, microservices deployed with Kubernetes, and agile methodologies like Scrum. Motivated by solving problems, learning new technologies, and working in teams. Advanced English (B2).",
   "languages": "Languages",
@@ -44,7 +45,7 @@
     "watchProjectVideo": "Watch project video",
  
   
-  "education": "Formación Académica",
+  "education": "Academic Training",
   "cfgs":"Higher Vocational Education",
   "degree1": "Multiplatform Application Development",
   "degree2": "Web Application Development",
