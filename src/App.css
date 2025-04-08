@@ -1,0 +1,95 @@
+
+/* Contenedor de los botones de idioma */
+.language-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Estilo común para los botones */
+.language-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-btn img {
+  width: 20px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+/* Efecto hover en los botones */
+.language-btn:hover {
+  background-color: #28a745; /* verde estilo Bootstrap success */
+  color: white;
+  border-color: #218838;
+}
+
+.language-btn:focus {
+  outline: none;
+}
+
+/* Estilo para el botón seleccionado */
+.selected-lang {
+  background-color: #28a745; /* verde estilo Bootstrap success */
+  color: white;
+  border-color: #218838;
+}
+
+/* Botón de cambio de modo de tema */
+.language-btn.light-mode {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.language-btn.dark-mode {
+  background-color: #343a40;
+  color: white;
+}
+
+/* Estilo para el grupo de botones */
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+/* Modo claro (por defecto) */
+body.light-mode {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+body.light-mode .card {
+  background-color: #ffffff;
+  color: #212529;
+  border: 1px solid #dee2e6;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #232323; /* Gris más suave */
+color: #e0e0e0; /* Texto en gris claro */
+
+  
+}
+
+body.dark-mode .card {
+  background-color: #2a2a2a; /* Gris oscuro pero más claro */
+color: #e0e0e0; /* Mantener el texto en gris claro */
+border: 1px solid #444444; /* Agregar borde suave */
+box-shadow: 0 0 10px rgba(14, 14, 14, 0.3); /* Sombra más suave */
+
+}
+
+h1 {
+  margin-bottom: 0;
+}
