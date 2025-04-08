@@ -4,43 +4,44 @@ import { useTranslation } from 'react-i18next'
 
 function TechSkills() {
   const { t } = useTranslation()
+  const base = "";
 
   const frontEnd = [
-    { name: 'HTML5', image: '/assets/images/html5.png' },
-    { name: 'CSS3', image: '/assets/images/css3.png' },
-    { name: 'Bootstrap', image: '/assets/images/bootstrap.png' },
-    { name: 'JavaScript ES6', image: '/assets/images/javascript.png' },
-    { name: 'React', image: '/assets/images/react.png' },
+    { name: 'HTML5', image: `${base}assets/images/html5.png` },
+    { name: 'CSS3', image: `${base}assets/images/css3.png` },
+    { name: 'Bootstrap', image: `${base}assets/images/bootstrap.png` },
+    { name: 'JavaScript ES6', image: `${base}assets/images/javascript.png` },
+    { name: 'React', image: `${base}assets/images/react.png` },
   ]
 
   const backEnd = [
-    { name: 'Spring Boot', image: '/assets/images/springboot.png' },
-    { name: 'Node.js', image: '/assets/images/nodejs.png' },
-    { name: 'Java', image: '/assets/images/java.png' },
+    { name: 'Spring Boot', image: `${base}assets/images/springboot.png` },
+    { name: 'Node.js', image: `${base}assets/images/nodejs.png` },
+    { name: 'Java', image: `${base}assets/images/java.png` },
   ]
 
   const versionControl = [
-    { name: 'Git', image: '/assets/images/git.png' }
+    { name: 'Git', image: `${base}assets/images/git.png` }
   ]
 
   const otherTech = [
-    { name: 'Kotlin', image: '/assets/images/kotlin.png' },
-    { name: 'Android', image: '/assets/images/android.png' },
-    { name: 'JavaFX', image: '/assets/images/javafx.png' },
-    { name: '.NET', image: '/assets/images/dotnet.png' },
-    { name: 'C++', image: '/assets/images/c++.png' },
-    { name: 'C#', image: '/assets/images/csharp.png' }
+    { name: 'Kotlin', image: `${base}assets/images/kotlin.png` },
+    { name: 'Android', image: `${base}assets/images/android.png` },
+    { name: 'JavaFX', image: `${base}assets/images/javafx.png` },
+    { name: '.NET', image: `${base}assets/images/dotnet.png` },
+    { name: 'C++', image: `${base}assets/images/c++.png` },
+    { name: 'C#', image: `${base}assets/images/csharp.png` }
   ]
 
   const devOps = [
-    { name: 'Kubernetes', image: '/assets/images/kubernetes.png' },
-    { name: 'Linux', image: '/assets/images/linux.png' }
+    { name: 'Kubernetes', image: `${base}assets/images/kubernetes.png` },
+    { name: 'Linux', image: `${base}assets/images/linux.png` }
   ]
 
   const ideTools = [
-    { name: 'VSCode', image: '/assets/images/vscode.png' },
-    { name: 'IntelliJ IDEA', image: '/assets/images/intellij.png' },
-    { name: 'Eclipse', image: '/assets/images/eclipse.png' }
+    { name: 'VSCode', image: `${base}assets/images/vscode.png` },
+    { name: 'IntelliJ IDEA', image: `${base}assets/images/intellij.png` },
+    { name: 'Eclipse', image: `${base}assets/images/eclipse.png` }
   ]
 
   const renderSkills = (skills) => {

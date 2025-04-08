@@ -9,11 +9,11 @@ function PersonalInfo() {
     <Card className="mb-3">
     <Card.Body>
       <h3>{t('personalInfo')}</h3>
-      <Card.Text>{t('email')}: gsanchezfernandez01@gmail.com</Card.Text>
+      <Card.Text><strong>{t('email')}</strong>: gsanchezfernandez01@gmail.com</Card.Text>
       <Card.Text>
-        {t('linkedin')}: <a href="https://www.linkedin.com/in/g-sanchez-fernandez/">g-sanchez-fernandez</a>
+        <strong>{t('linkedin')}</strong>: <a href="https://www.linkedin.com/in/g-sanchez-fernandez/">g-sanchez-fernandez</a>
       </Card.Text>
-      <Card.Text>{t('location')}: Gijón, Asturias</Card.Text>
+      <Card.Text><strong>{t('location')}</strong>: Gijón, Asturias</Card.Text>
     </Card.Body>
   </Card>
   

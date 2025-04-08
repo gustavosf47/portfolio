@@ -14,8 +14,8 @@ import TechSkills from "./components/TechSkills";
 
 function App() {
   const { t, i18n } = useTranslation();
+  const base = "";
 
-  // Lee dark mode desde localStorage o usa true por defecto
   const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem("darkMode");
     return saved === null ? true : JSON.parse(saved);
@@ -33,60 +33,60 @@ function App() {
 
   return (
     <Container className="my-4">
-      <div className="d-flex justify-content-between align-items-center mb-4">
-        <h1>{t("title")}</h1>
-        <div className="language-buttons d-flex gap-2">
+      <div className="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 gap-3">
+        <h1 className="text-center text-md-start">{t("title")}</h1>
+
+        <div className="language-buttons d-flex flex-wrap justify-content-center gap-2">
           <button
             className={`language-btn ${darkMode ? "light-mode" : "dark-mode"}`}
             onClick={() => setDarkMode(!darkMode)}
           >
             <img
               src={
-                darkMode ? "/assets/images/sun.png" : "/assets/images/moon.png"
+                darkMode
+                  ? `${base}assets/images/sun.png`
+                  : `${base}assets/images/moon.png`
               }
               alt={darkMode ? "Light Mode" : "Dark Mode"}
-              style={{ width: "25px", margin:"0"}}
+              style={{ width: "25px", margin: "0" }}
             />
-           
           </button>
 
-          <div className="button-group">
-            <button
-              className={`language-btn ${
-                i18n.language === "es" ? "selected-lang" : ""
-              }`}
-              onClick={() => toggleLanguage("es")}
-              
-            >
-              <img src="/assets/images/spain.png" alt="Español" />
-              {t("switchToSpanish")}
-            </button>
-            <button
-              className= {`language-btn ${
-                i18n.language === "en" ? "selected-lang" : ""
-              }`}
-              onClick={() => toggleLanguage("en")}
-            >
-              <img src="/assets/images/uk.png" alt="English" />
-              {t("switchToEnglish")}
-            </button>
-          </div>
+          <button
+            className={`language-btn ${
+              i18n.language === "es" ? "selected-lang" : ""
+            }`}
+            onClick={() => toggleLanguage("es")}
+          >
+            <img src={`${base}assets/images/spain.png`} alt="Español" />
+            {t("switchToSpanish")}
+          </button>
+
+          <button
+            className={`language-btn ${
+              i18n.language === "en" ? "selected-lang" : ""
+            }`}
+            onClick={() => toggleLanguage("en")}
+          >
+            <img src={`${base}assets/images/uk.png`} alt="English" />
+            {t("switchToEnglish")}
+          </button>
         </div>
       </div>
 
-      <Row>
-        <Col md={6}>
+      <Row className="gy-4">
+        <Col xs={12} md={6}>
           <PersonalInfo />
           <Education />
           <Languages />
           <Availability />
         </Col>
-        <Col md={6}>
+        <Col xs={12} md={6}>
           <AboutMe />
           <WorkExperience />
           <SoftSkills />
         </Col>
-        <Col>
+        <Col xs={12}>
           <TechSkills />
         </Col>
       </Row>
